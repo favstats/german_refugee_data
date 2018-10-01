@@ -91,6 +91,7 @@ ggsave(filename = "images/asylum_numbers.png", width = 12, height = 7)
 
 [![](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png)](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png) 
 
+## Logged Numbers
 
 ``` r
 rev_cols <- c("#56B4E9", "#E69F00", "#000000")
