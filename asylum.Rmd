@@ -1,29 +1,33 @@
-German Refugee Data
-================
+---
+title: "German Refugee Data"
+output: github_document
+---
 
 Data Sources:
 
-1.  <http://www.bamf.de/DE/Infothek/Statistiken/statistiken-node.html>
+1. http://www.bamf.de/DE/Infothek/Statistiken/statistiken-node.html
 
-2.  <http://biaj.de/>
+2. http://biaj.de/
 
 ## Load packages
 
-``` r
+```{r, eval = F}
 pacman::p_load(tidyverse, tabulizer, gganimate)
 ```
 
 ## Get Acceptance Rates
 
-``` r
-source("asylum_dat.R")
+```{r, eval = F}
+# source("asylum_dat.R")
 
 load("data/refugee_decisions.Rdata")
+
 ```
 
 ## Number of Refugees Data
 
-``` r
+```{r, eval = F}
+
 load("data/asylum_dat.Rdata")
 
 asylum_dat <- asylum_dat %>% 
@@ -36,7 +40,7 @@ asylum_dat <- asylum_dat %>%
 
 ## Plot Static
 
-``` r
+```{r, eval = F}
 rev_cols <- c("#56B4E9", "#E69F00", "#000000")
 #rev(ggthemes::colorblind_pal()(3))
 
@@ -89,11 +93,12 @@ asylum_dat %>%
 ggsave(filename = "images/asylum_numbers.png", width = 12, height = 7)
 ```
 
-<https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png>
+[![](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png)](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png) 
 
 ## Animation
 
-``` r
+```{r, eval = F}
+
 asyl_anim <- asylum_dat %>% 
   full_join(refugee_decisions) %>%
   select(time, `Total Number of Asylum Seekers` = number, 
@@ -146,4 +151,4 @@ asyl_anim %>% animate(
 anim_save("images/asyl_anim.gif")
 ```
 
-<https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asyl_anim.gif>
+[![](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asyl_anim.gif)](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asyl_anim.gif) 
