@@ -89,7 +89,7 @@ asylum_dat %>%
 ggsave(filename = "images/asylum_numbers.png", width = 12, height = 7)
 ```
 
-<https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png>
+[![](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png)](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asylum_numbers.png) 
 
 ## Animation
 
@@ -146,4 +146,4 @@ asyl_anim %>% animate(
 anim_save("images/asyl_anim.gif")
 ```
 
-<https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asyl_anim.gif>
+[![](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asyl_anim.gif)](https://raw.githubusercontent.com/favstats/german_refugee_data/master/images/asyl_anim.gif) 
